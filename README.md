@@ -1,1 +1,1 @@
-# -devops-diplom-k8s-config
+# devops-diplom-k8s-config
