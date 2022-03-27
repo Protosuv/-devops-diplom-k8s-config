@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: diplom-app-deployment
+  labels:
+    app: diplom-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: diplom-app
+  template:
+    metadata:
+      labels:
+        app: diplom-app
+    spec:
+      containers:
+      - name: diplom-app
+        image: protosuv/diplom-nginx-app:latest
+        ports:
+        - containerPort: 80
+          name: http
